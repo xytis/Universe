@@ -1,0 +1,10 @@
+.*
+
+# Temp files
+*~
+*.tmp
+
+# User files (non project)
+*.user
+
+!.gitignore
