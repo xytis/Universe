@@ -6,13 +6,17 @@
 
 QT       += core gui
 
+QMAKE_CXXFLAGS += -std=c++0x
+
 TARGET = Universe
 TEMPLATE = app
 
 
 SOURCES += main.cpp\
-        mainwindow.cpp
+        mainwindow.cpp \
+    Container/container.cpp
 
-HEADERS  += mainwindow.h
+HEADERS  += mainwindow.h \
+    Container/container.h
 
 FORMS    += mainwindow.ui
