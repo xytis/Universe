@@ -1,0 +1,13 @@
+<Universe name="Sample">
+    <node name="Parent" path="Parent">
+        <description path="description.txt" />
+        <map path="" />
+
+        <node name="Child" path="Child">
+            <node name="Child" path="Child>
+                <description path="description.txt" />
+            </node>
+        </node>
+    </node>
+
+</Universe>

@@ -1,7 +1,7 @@
 #ifndef CONTAINER_H
 #define CONTAINER_H
 
-// Base class, used when traversing file system, to fill up world information.s
+// Base class, used when traversing file system, to fill up world informations
 
 #include <QtCore/QList>
 
