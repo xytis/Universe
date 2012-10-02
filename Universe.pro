@@ -14,14 +14,17 @@ TEMPLATE = app
 
 SOURCES += main.cpp\
         mainwindow.cpp \
-    Container/container.cpp \
     Project/projectloader.cpp \
-    Project/project.cpp
+    Project/project.cpp \
+    Container/node.cpp \
+    Container/description.cpp
 
 HEADERS  += mainwindow.h \
-    Container/container.h \
     Project/projectloader.h \
-    Project/project.h
+    Project/project.h \
+    Container/node.h \
+    Container/description.h \
+    common.h
 
 FORMS    += mainwindow.ui
 
@@ -34,4 +37,5 @@ OTHER_FILES += \
 
 unix|win32: LIBS += -lboost_filesystem
 unix|win32: LIBS += -lboost_system
+unix|win32: LIBS += -lboost_serialization
 

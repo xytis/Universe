@@ -9,22 +9,32 @@
  */
 
 #include <boost/filesystem.hpp>
-#include <fstream>
+#include <boost/property_tree/ptree.hpp>
 
-#include "Container/container.h"
+#include <fstream>
+#include <string>
+
+#include "Container/node.h"
 
 namespace bf = boost::filesystem;
+
 
 class Project
 {
 public:
+    struct ProjectData {
+        std::string m_oName;
+    };
+public:
     Project(bf::path oRootPath);
     ~Project();
 
-    Container *     GetRoot();
+    CNode *     GetRoot();
 private:
+    ProjectData     m_sData;
     bf::path        m_oRootPath;
     std::fstream    m_oStream;
+    CNode           m_oRoot;
 
     bool m_bDirty;
 };

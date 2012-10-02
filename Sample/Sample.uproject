@@ -1,13 +1,6 @@
-<Universe name="Sample">
-    <node name="Parent" path="Parent">
-        <description path="description.txt" />
-        <map path="" />
-
-        <node name="Child" path="Child">
-            <node name="Child" path="Child>
-                <description path="description.txt" />
-            </node>
-        </node>
-    </node>
-
-</Universe>
+22 serialization::archive 9 1 0
+0 -1 0 0 2 0 1 1 0
+1
+2 0 0 1 0 0
+3 1 1 0 0 12 Random words 0
+4 0 0 0 0
