@@ -10,10 +10,11 @@
 class CDescription : public CNode
 {
 public:
-    CDescription(std::string sDescription = "", CNode * pParent = NULL);
+    CDescription(std::string sDescription = "", CNode * pParent = nullptr);
     virtual ~CDescription();
 
     virtual const char * Type() const { return "Description"; };
+    virtual const char * Description() const { return (std::string("Containting: ") + m_sDesciption).c_str(); };
 
     //Boost serialization
     friend class boost::serialization::access;
@@ -24,8 +25,9 @@ public:
         {
 
         }
-        ar & boost::serialization::base_object<CNode>(*this);
-        ar & m_sDesciption;
+        //ar & boost::serialization::base_object<CNode>(*this);
+        ar & BOOST_SERIALIZATION_BASE_OBJECT_NVP(CNode);
+        ar & BOOST_SERIALIZATION_NVP(m_sDesciption);
     }
 
 private:

@@ -15,10 +15,11 @@ class CDescription;
 class CNode
 {
 public:
-    CNode(CNode * pParent = NULL);
+    CNode(CNode * pParent = nullptr);
     virtual ~CNode();
 
     virtual const char * Type() const { return "Generic"; };
+    virtual const char * Description() const { return ""; };
 
     //Boost serialization
     friend class boost::serialization::access;
@@ -32,8 +33,8 @@ public:
         {
 
         }
-        ar & m_pParent;
-        ar & m_pChildren;
+        ar & BOOST_SERIALIZATION_NVP(m_pParent);
+        ar & BOOST_SERIALIZATION_NVP(m_pChildren);
     }
 
     //Debug output
@@ -41,7 +42,8 @@ public:
         int width = out.width() + 2;
         out << '\n' << std::setw(width) << ' ';
         out << object.Type() << ' ';
-        out << &object;
+        out << &object << ' ';
+        out << object.Description();
         for(auto child : object.m_pChildren){
             out << std::setw(width) << (*child);
         }

@@ -13,8 +13,8 @@ namespace std{
 }
 #endif
 
-#include <boost/archive/text_oarchive.hpp>
-#include <boost/archive/text_iarchive.hpp>
+#include <boost/archive/xml_oarchive.hpp>
+#include <boost/archive/xml_iarchive.hpp>
 
 
 Project::Project(bf::path rootPath)
@@ -36,18 +36,18 @@ Project::Project(bf::path rootPath)
 
     {
         std::ofstream ofs(m_oRootPath.c_str());
-        boost::archive::text_oarchive oa(ofs);
+        boost::archive::xml_oarchive oa(ofs);
         // write class instance to archive
-        oa << m_oRoot;
+        oa << BOOST_SERIALIZATION_NVP(m_oRoot);
         // archive and stream closed when destructors are called
     }
 
     CNode copy;
     {
         std::ifstream ifs(m_oRootPath.c_str());
-        boost::archive::text_iarchive ia(ifs);
+        boost::archive::xml_iarchive ia(ifs);
         // write class instance to archive
-        ia >> copy;
+        ia >> BOOST_SERIALIZATION_NVP(copy);
         // archive and stream closed when destructors are called
     }
 

@@ -1,6 +1,36 @@
-22 serialization::archive 9 1 0
-0 -1 0 0 2 0 1 1 0
-1
-2 0 0 1 0 0
-3 1 1 0 0 12 Random words 0
-4 0 0 0 0
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<!DOCTYPE boost_serialization>
+<boost_serialization signature="serialization::archive" version="9">
+<m_oRoot class_id="0" tracking_level="1" version="0" object_id="_0">
+	<m_pParent class_id="-1"></m_pParent>
+	<m_pChildren class_id="2" tracking_level="0" version="0">
+		<count>2</count>
+		<item_version>0</item_version>
+		<item class_id="1" tracking_level="1" version="0" object_id="_1">
+			<CNode object_id="_2">
+				<m_pParent class_id_reference="0" object_id_reference="_0"></m_pParent>
+				<m_pChildren>
+					<count>1</count>
+					<item_version>0</item_version>
+					<item class_id_reference="0" object_id="_3">
+						<m_pParent class_id_reference="1" object_id_reference="_1"></m_pParent>
+						<m_pChildren>
+							<count>0</count>
+							<item_version>0</item_version>
+						</m_pChildren>
+					</item>
+				</m_pChildren>
+			</CNode>
+			<m_sDesciption>Random words</m_sDesciption>
+		</item>
+		<item class_id_reference="0" object_id="_4">
+			<m_pParent class_id_reference="0" object_id_reference="_0"></m_pParent>
+			<m_pChildren>
+				<count>0</count>
+				<item_version>0</item_version>
+			</m_pChildren>
+		</item>
+	</m_pChildren>
+</m_oRoot>
+</boost_serialization>
+
