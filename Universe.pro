@@ -18,3 +18,7 @@ SOURCES += main.cpp\
 HEADERS  += mainwindow.h
 
 FORMS    += mainwindow.ui
+
+#Add json parser
+LIBS += -L"External/json_spirit/lib" -ljson_spirit
+INCLUDEPATH += "External/json_spirit/include"
