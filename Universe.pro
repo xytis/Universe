@@ -13,9 +13,11 @@ TEMPLATE = app
 
 
 SOURCES += main.cpp\
-        mainwindow.cpp
+        mainwindow.cpp \
+    Tests/test_json.cpp
 
-HEADERS  += mainwindow.h
+HEADERS  += mainwindow.h \
+    Tests/test_json.h
 
 FORMS    += mainwindow.ui
 

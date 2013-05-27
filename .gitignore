@@ -11,3 +11,6 @@
 
 # Build dirs
 build/
+
+#moc files
+moc_*
