@@ -8,3 +8,6 @@
 *.user
 
 !.gitignore
+
+# Build dirs
+build/
