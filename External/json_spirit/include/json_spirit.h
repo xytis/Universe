@@ -15,4 +15,6 @@
 #include "json_spirit_writer.h"
 #include "json_spirit_utils.h"
 
+namespace js = json_spirit;
+
 #endif

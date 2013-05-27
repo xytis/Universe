@@ -20,5 +20,10 @@ HEADERS  += mainwindow.h
 FORMS    += mainwindow.ui
 
 #Add json parser
-LIBS += -L"External/json_spirit/lib" -ljson_spirit
-INCLUDEPATH += "External/json_spirit/include"
+unix|win32: LIBS += -L$$PWD/External/json_spirit/lib/ -ljson_spirit
+
+INCLUDEPATH += $$PWD/External/json_spirit/include
+DEPENDPATH += $$PWD/External/json_spirit/include
+
+win32: PRE_TARGETDEPS += $$PWD/External/json_spirit/lib/json_spirit.lib
+else:unix: PRE_TARGETDEPS += $$PWD/External/json_spirit/lib/libjson_spirit.a
